@@ -2,4 +2,4 @@
 
 ---
 
-This is the website for the international brand
+This is the website for the multinational brand
