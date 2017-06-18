@@ -1,0 +1,29 @@
+{
+  "name": "cheddarbiscuit.us",
+  "version": "0.1.0",
+  "description": "a dynamic version of the cheddar biscuit website",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "fs-readdir-recursive": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterhen0/cheddarbiscuit.us"
+  },
+  "keywords": [
+    "cheddar",
+    "biscuit",
+    "experimental"
+  ],
+  "author": "Henry Peterson, Nick Finberg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/peterhen0/cheddarbiscuit.us/issues"
+  }
+}
