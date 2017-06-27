@@ -5,7 +5,8 @@ var fs = require('fs');
 var app = express();
 var port = process.env.PORT || 8080;
 
-var paths = read(__dirname + '../public/');
+var paths = read('../public/');
+console.log(paths);
 
 function fileOb(name, path, data){
     this.name = name;
@@ -24,18 +25,14 @@ function getNameFromPath(path){
 function makeContent(paths){
    var result = [];
    paths.forEach(function(item){
-       item = 'public/' + item;
-       //var fileData = fs.readFileSync(item);
-       //console.log('file being read');
-       var ob = new fileOb(getNameFromPath(item), item, null);
+       var ob = new fileOb(getNameFromPath(item), '../public/' + item, null);
        result.push(ob)
    });
    return result;
 }
 
 var content = makeContent(paths);
-
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 app.get('/', function(req, res, next){
     res.status(200);
